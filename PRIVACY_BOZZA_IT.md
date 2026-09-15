@@ -81,7 +81,7 @@ L'invio di email è facoltativo, ma senza un contatto e le informazioni indispen
 
 ## 8. Destinatari e trasferimenti
 
-La casella di assistenza usa **Microsoft Outlook/Hotmail**: Microsoft tratta le comunicazioni secondo le condizioni del servizio e la propria [informativa privacy](https://www.microsoft.com/it-it/privacy/privacystatement).
+Le richieste di assistenza sono gestite soltanto nella casella **Microsoft Outlook/Hotmail**, accessibile al solo titolare, senza altri archivi di assistenza dichiarati. Microsoft tratta le comunicazioni secondo le condizioni del servizio e la propria [informativa privacy](https://www.microsoft.com/it-it/privacy/privacystatement).
 
 **Google** gestisce i servizi Google Play e i trattamenti descritti nelle proprie informative. Le app e i destinatari scelti per condividere un report trattano invece la copia ricevuta secondo le loro condizioni. Autorità o professionisti possono ricevere soltanto dati necessari a un obbligo applicabile o alla gestione di una controversia.
 
