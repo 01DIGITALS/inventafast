@@ -20,10 +20,14 @@ La precedente indicazione di collaudo sul Nothing ancora da eseguire è superata
 ### Lavoro residuo attuale
 
 1. Valutare separatamente i flussi necessari degli acquisti e l'eventuale diagnostica Billing: categorie di dati, finalità, ruoli, conservazione, condizioni applicabili ed eventuali controlli. La valutazione precedente sulle metriche ML Kit non viene trasferita automaticamente a Billing.
-2. Definire con il titolare la gestione dei report degli incassi, tuttora non decisa. Assistenza Hotmail, accesso esclusivo del titolare, email corretta e durata massima sono già confermati.
+2. Gestione dei report degli incassi confermata dal titolare: sola consultazione in Google Play Console, senza download, copie esterne o condivisione dei report. La policy è stata integrata. Non viene inventato un termine di conservazione Google né considerata verificata una configurazione fiscale. Assistenza Hotmail, accesso esclusivo del titolare, email corretta e durata massima sono già confermati.
 3. Allineare il modulo Sicurezza dei dati e la pagina definitiva al candidato effettivamente distribuito. I collaudi sul campo riguardano l'affidabilità del nuovo scanner e non provano da soli l'assenza di flussi degli altri SDK.
 
 La policy GitHub è aggiornata al nuovo scanner e resta in bozza per i punti sopra. Non sono state modificate app, impostazioni Play o informazioni del portfolio.
+
+## Conferma del titolare sulla gestione incassi
+
+Il titolare ha scelto esplicitamente l'opzione 1: consultare soltanto ordini e report in Google Play Console. Le precedenti indicazioni di decisione ancora pendente, conservate nello storico sottostante, sono superate. Questa conferma definisce la prassi dichiarata e non documenta un controllo delle impostazioni della Console. Resta aperta la valutazione tecnica e giuridica dei componenti Google Play Billing.
 
 ## Storico delle revisioni precedenti
 
