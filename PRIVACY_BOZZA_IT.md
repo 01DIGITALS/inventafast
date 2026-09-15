@@ -39,7 +39,7 @@ Per gestire la demo e lo sblocco offline, l'app conserva separatamente dall'inve
 
 Google Play gestisce pagamento e ripristino. L'app riceve dati tecnici dell'acquisto, fra cui prodotto, stato, identificativi della transazione, token e firma; verifica la risposta per abilitare lo sblocco. Il proprio archivio di licenza conserva lo stato e le date sopra descritti, non una copia completa della ricevuta né i dati della carta. Non è previsto l'invio delle ricevute a un server dello sviluppatore.
 
-La consultazione delle offerte, l'acquisto e il ripristino utilizzano Google Play e possono richiedere una connessione anche se l'inventario funziona offline. L'app non richiede le credenziali dell'account Google.
+All'avvio l'app avvia la consultazione del prodotto tramite Google Play, prima che l'utente prema “Acquista”. La consultazione delle offerte, l'acquisto e il ripristino utilizzano Google Play e possono richiedere una connessione anche se l'inventario funziona offline. Consultare il prodotto non comporta un acquisto o un addebito. L'app non richiede le credenziali dell'account Google.
 
 Le informazioni gestite da Google seguono le [Norme sulla privacy di Google](https://policies.google.com/privacy?hl=it). Cancellare i dati di InventaFast non elimina la cronologia di Google Play e non equivale a chiedere un rimborso. Dopo la cancellazione può essere necessario ripristinare l'acquisto con il medesimo account Google Play.
 
@@ -48,6 +48,8 @@ Le informazioni gestite da Google seguono le [Norme sulla privacy di Google](htt
 L'accesso alla fotocamera è facoltativo ed è richiesto per la scansione. È possibile inserire manualmente i codici senza concedere il permesso, oppure revocarlo nelle impostazioni Android. Torcia, suono e vibrazione servono al funzionamento dello scanner; suono e vibrazione sono disattivabili separatamente.
 
 Il riconoscimento usa Google ML Kit con modello incluso nell'app. Secondo la [documentazione privacy di ML Kit](https://developers.google.com/ml-kit/terms), immagini e risultati del riconoscimento sono elaborati sul dispositivo e non sono inviati ai server Google attraverso tali API.
+
+ML Kit viene inizializzato all'avvio dell'app tramite un componente Android; la diagnostica del riconoscimento è collegata all'elaborazione dello scanner. Questi eventi non dimostrano, da soli, che dati siano stati inviati in una specifica sessione: non è stata effettuata una cattura del traffico di rete. Non si assume che l'inizializzazione attenda l'apertura della fotocamera o la concessione del relativo permesso.
 
 **Diagnostica Google.** Oltre al riconoscimento locale, ML Kit include componenti che raccolgono metriche tecniche e possono comunicarle a Google tramite Google Play Services. La verifica del bundle Android conferma la presenza di questo percorso. La scansione offline non equivale quindi all'assenza di diagnostica.
 
