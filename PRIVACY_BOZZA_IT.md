@@ -2,7 +2,7 @@
 
 **Bozza revisionata il 15 settembre 2026 — non ancora definitiva per lo store.**
 Il contatto e la durata di conservazione delle email sono stati confermati dal titolare.
-Restano da chiudere le verifiche sulla diagnostica degli SDK e sui trattamenti amministrativi degli acquisti, riportate nelle [note di revisione](REVISIONE_PRIVACY_2026-09-15.md).
+La verifica tecnica aggiornata conferma la presenza della diagnostica Google. ML Kit viene mantenuto per questa versione. Restano da completare l'inquadramento giuridico della diagnostica e dei trattamenti amministrativi degli acquisti, riportati nelle [note di revisione](REVISIONE_PRIVACY_2026-09-15.md).
 
 ## 1. Titolare e contatti
 
@@ -49,11 +49,13 @@ L'accesso alla fotocamera è facoltativo ed è richiesto per la scansione. È po
 
 Il riconoscimento usa Google ML Kit con modello incluso nell'app. Secondo la [documentazione privacy di ML Kit](https://developers.google.com/ml-kit/terms), immagini e risultati del riconoscimento sono elaborati sul dispositivo e non sono inviati ai server Google attraverso tali API.
 
-**Diagnostica: verifica ancora aperta.** Google documenta separatamente informazioni su dispositivo e app, identificativi d'installazione, prestazioni, configurazione delle API ed errori, utilizzati per diagnostica e analisi d'uso. Questi dati non vanno confusi con le fotografie o con l'inventario. Fonte: [dichiarazioni sui dati di ML Kit](https://developers.google.com/ml-kit/android-data-disclosure).
+**Diagnostica Google.** Oltre al riconoscimento locale, ML Kit include componenti che raccolgono metriche tecniche e possono comunicarle a Google tramite Google Play Services. La verifica del bundle Android conferma la presenza di questo percorso. La scansione offline non equivale quindi all'assenza di diagnostica.
 
-La configurazione release esaminata esclude il permesso Android INTERNET, ma questo elemento da solo non dimostra l'assenza di comunicazioni tramite altri servizi presenti sul dispositivo. Non è stata completata una verifica del traffico e delle comunicazioni fra processi sulla release definitiva. Finché tale controllo resta aperto, questa bozza non afferma né “nessun dato raccolto” né che ogni categoria documentata da Google venga effettivamente trasmessa da InventaFast.
+Per le funzioni con modello incluso, Google documenta informazioni su dispositivo e app, identificativi per installazione, tempi di elaborazione, configurazione e versione delle API, dimensioni degli input/output, eventi tecnici e codici di errore. Queste metriche sono distinte dalle immagini e dal contenuto dell'inventario. Google le utilizza per analisi d'uso, diagnosi dei problemi, manutenzione e miglioramento delle API e individuazione degli abusi. Fonte: [dichiarazioni sui dati di ML Kit](https://developers.google.com/ml-kit/android-data-disclosure) e [condizioni privacy ML Kit](https://developers.google.com/ml-kit/terms).
 
-Prima della pubblicazione occorre definire il trattamento effettivo, i destinatari, la conservazione e la base giuridica della diagnostica, oltre agli eventuali obblighi di informazione e consenso. Il permesso fotocamera non costituisce un consenso generale alla telemetria.
+L'effettiva trasmissione può dipendere dalla configurazione dei servizi Google, dal campionamento e dalla disponibilità della rete. L'assenza del permesso INTERNET nell'app non impedisce necessariamente comunicazioni svolte da Google Play Services. Non si dichiara che ogni categoria venga trasmessa in ogni scansione. L'auto-zoom non è abilitato.
+
+**Punto da completare prima dell'uso come informativa definitiva:** individuare i ruoli e la base giuridica applicabili alla diagnostica, i criteri di conservazione pertinenti e gli eventuali obblighi di informazione e consenso nell'app. La scelta tecnica di mantenere ML Kit e la descrizione della diagnostica non sostituiscono questa valutazione. Il permesso fotocamera non costituisce un consenso generale alla telemetria.
 
 ## 6. Esportazione e condivisione
 
