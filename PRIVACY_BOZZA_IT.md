@@ -2,7 +2,7 @@
 
 **Bozza revisionata il 15 settembre 2026 — non ancora definitiva per lo store.**
 Il contatto e la durata di conservazione delle email sono stati confermati dal titolare.
-Questa bozza riguarda il candidato Android **0.3.0+3**, nel quale ML Kit è stato sostituito con un decoder locale. Restano da completare la valutazione dei componenti Google Play Billing e la definizione dei trattamenti amministrativi degli incassi, riportate nelle [note di revisione](REVISIONE_PRIVACY_2026-09-15.md).
+Questa bozza riguarda il candidato Android **0.3.0+3**, nel quale ML Kit è stato sostituito con un decoder locale. Resta da completare la valutazione dei componenti Google Play Billing, riportata nelle [note di revisione](REVISIONE_PRIVACY_2026-09-15.md). La gestione degli incassi prevede la sola consultazione in Google Play Console.
 
 ## 1. Titolare e contatti
 
@@ -46,6 +46,8 @@ Le informazioni gestite da Google seguono le [Norme sulla privacy di Google](htt
 **Componenti Google degli acquisti — valutazione ancora aperta.** Google Play Billing include componenti di diagnostica e trasporto degli eventi, distinti dallo scanner locale. La loro presenza è stata rilevata nelle dipendenze del candidato esaminato; non dimostra, da sola, quali dati siano effettivamente trasmessi in una specifica sessione. Non è stata effettuata una cattura di rete. L'assenza del permesso INTERNET dell'app non controlla le comunicazioni svolte da Google Play Services.
 
 Prima dell'uso di questa bozza come informativa definitiva occorre completare la valutazione dei flussi di acquisto e della loro eventuale diagnostica: dati, finalità, ruoli, conservazione, base giuridica ed eventuali controlli o consensi necessari. Non si dichiara che l'intera app sia priva di componenti diagnostici Google.
+
+**Gestione degli incassi.** Il titolare consulta ordini e report esclusivamente all'interno di Google Play Console per verificare gli acquisti e gli incassi dell'app. Questa gestione non prevede lo scaricamento o la conservazione di copie su computer o servizi cloud esterni, né la condivisione dei report con un commercialista o altre persone. La consultazione riguarda le informazioni sull'ordine e gli importi resi disponibili dalla Console, limitatamente a quanto necessario. Per la gestione del rapporto di acquisto la base giuridica è l'esecuzione del contratto, art. 6(1)(b) GDPR; eventuali adempimenti imposti dalla legge si fondano sull'art. 6(1)(c). Non viene costituito un archivio separato degli incassi presso il titolare: la disponibilità e la conservazione dei dati nel servizio Google seguono le condizioni e l'informativa del servizio, senza un termine di cancellazione autonomamente impostato dall'app. Eventuali future modalità diverse saranno valutate e descritte prima di essere adottate.
 
 ## 5. Fotocamera e scanner locale
 
