@@ -1,104 +1,119 @@
 # Informativa privacy — InventaFast per Android
 
-**Bozza da approvare prima della pubblicazione.** Versione 15 settembre 2026.
-Confermare operatività del contatto e verifica
-finale degli SDK prima di inserire questo testo nell'app e sul sito pubblico.
+**Bozza revisionata il 15 settembre 2026 — non ancora definitiva per lo store.**
+Il contatto e la durata di conservazione delle email sono stati confermati dal titolare.
+Restano da chiudere le verifiche sulla diagnostica degli SDK e sui trattamenti amministrativi degli acquisti, riportate nelle [note di revisione](REVISIONE_PRIVACY_2026-09-15.md).
 
-Il titolare del trattamento è Louis Sanges. InventaFast è sviluppata da
-LouisBigDev. Contatto privacy e assistenza:
-louisbigdev@hotmai.com.
+## 1. Titolare e contatti
 
-## Inventario e funzionamento locale
+Il titolare dei trattamenti svolti per fornire assistenza e gestire il rapporto con gli utenti è **Louis Sanges**, sviluppatore di InventaFast con il nome **LouisBigDev**.
 
-L'app memorizza sul dispositivo il nome dell'azienda e dei magazzini, gli articoli,
-i codici a barre, i formati, i materiali, le unità di misura, le classificazioni,
-le quantità e le preferenze. L'apprendimento di materiali e packaging consiste
-nel riutilizzo delle voci inserite nell'archivio locale.
-Non è richiesto un account InventaFast. Non sono presenti pubblicità o servizi
-di sincronizzazione gestiti dallo sviluppatore. Per l'acquisto e il ripristino
-dello sblocco viene utilizzato l'account Google Play dell'utente.
+Per assistenza e richieste relative ai dati personali: **[louisbigdev@hotmail.com](mailto:louisbigdev@hotmail.com)**.
 
-## Demo e acquisto tramite Google Play
+Questa informativa riguarda InventaFast per Android. Non descrive una futura versione iOS né sostituisce le informative dei servizi esterni scelti dall'utente.
 
-La demo dura sette giorni dal primo avvio. Non prevede addebiti automatici.
-Alla scadenza l'archivio non viene cancellato: senza acquisto resta disponibile
-l'esportazione dei dati salvati. Lo sblocco è un acquisto unico, senza abbonamento;
-il prezzo applicabile viene mostrato da Google Play prima della conferma.
+## 2. In sintesi
 
-Per gestire la demo e consentire l'utilizzo offline dopo l'acquisto, l'app
-conserva sul dispositivo la data di inizio demo, l'ultima data verificata,
-lo stato dello sblocco e un indicatore di anomalie dell'orologio. Questi dati
-sono conservati in un archivio protetto separato dall'inventario. Azzerare
-i conteggi o cancellare il catalogo non elimina lo stato della licenza.
+- L'inventario è conservato sul dispositivo. Non è richiesto un account InventaFast e non è presente una sincronizzazione con server dello sviluppatore.
+- La fotocamera serve a leggere i codici a barre; i fotogrammi sono elaborati sul dispositivo e l'app non salva fotografie o video.
+- Gli acquisti sono gestiti da Google Play. Lo sviluppatore non riceve dall'app i dati della carta di pagamento.
+- Excel e PDF sono generati localmente. La condivisione avviene soltanto quando l'utente la richiede e sceglie un destinatario.
+- Le email inviate all'assistenza sono ricevute e trattate dal titolare.
+- L'elaborazione locale dello scanner non equivale all'assenza di diagnostica dei componenti Google: si veda la sezione 5.
 
-Google Play gestisce il pagamento e il ripristino degli acquisti. L'app riceve
-i dati tecnici della transazione, tra cui identificativo del prodotto, stato
-dell'acquisto, identificativi della transazione e token di acquisto, e ne
-verifica la firma per abilitare lo sblocco. Il codice applicativo conserva
-come licenza lo stato dello sblocco, non i dati della carta di pagamento.
-Non invia le ricevute a un server dello sviluppatore. La gestione dell'acquisto
-e del ripristino richiede una connessione e i servizi Google Play.
+## 3. Dati dell'inventario e funzionamento locale
 
-I dati di pagamento e le registrazioni conservate da Google sono soggetti
-alla [privacy policy Google](https://policies.google.com/privacy).
-La cancellazione dei dati di InventaFast non cancella la cronologia degli
-acquisti Google Play e non costituisce una richiesta di rimborso.
+L'app memorizza nome dell'azienda e dei magazzini, articoli, codici a barre, formati, materiali, unità di misura, classificazioni, quantità, date delle operazioni, preferenze e identificativi interni necessari a collegare le registrazioni. Il riutilizzo di materiali e packaging deriva dalle voci dell'archivio locale; non comporta l'invio del catalogo a un servizio di intelligenza artificiale.
 
-## Fotocamera e scanner
+Il nome di un'azienda o il contenuto di un campo libero può contenere dati personali, ad esempio quando identifica una persona fisica. Inserire soltanto informazioni necessarie all'inventario.
 
-La fotocamera viene utilizzata su richiesta per leggere i codici a barre e,
-facoltativamente, accendere la torcia. I fotogrammi sono elaborati sul dispositivo
-con il modello di riconoscimento incluso nell'app. Il codice viene utilizzato
-per ricercare o registrare un articolo; l'app non salva fotografie o video.
-È possibile inserire i codici manualmente senza concedere l'accesso alla camera.
-Il beep e la vibrazione sono disattivabili separatamente.
+Il codice applicativo non invia automaticamente l'inventario allo sviluppatore. Se un'impresa utilizza l'app per trattare dati personali di altre persone per proprie finalità, deve valutarne autonomamente la liceità e gli obblighi informativi. La fornitura del software non attribuisce allo sviluppatore l'accesso a tali dati.
 
-La release Android esaminata non dispone del permesso Internet. Google ML Kit,
-utilizzato dallo scanner, contiene componenti che possono generare diagnostica,
-metriche d'uso e identificativi di installazione. La comunicazione di rete diretta
-del processo dell'app è disabilitata nella release. Prima di pubblicare va
-completata la valutazione degli eventuali servizi di sistema e delle dichiarazioni
-richieste per gli SDK: questo paragrafo non autorizza automaticamente la risposta
-«nessun dato raccolto» nel modulo Sicurezza dei dati.
+Nella versione esaminata non risultano pubblicità, account applicativi o strumenti di analisi del comportamento integrati dallo sviluppatore. I componenti Google e la loro diagnostica sono descritti separatamente.
 
-## Esportazioni e condivisione
+## 4. Demo, licenza e acquisti
 
-Excel e PDF vengono generati localmente. Quando si sceglie di condividerli,
-Android consente di selezionare l'app destinataria. Il contenuto del report sarà
-accessibile al destinatario scelto e soggetto alle sue modalità di trattamento.
-Lo sviluppatore non riceve automaticamente i report.
+La demo dura sette giorni dal primo avvio e non comporta addebiti automatici. Alla scadenza l'archivio non viene cancellato e rimane disponibile l'esportazione. Lo sblocco è un acquisto unico, senza abbonamento; il prezzo viene mostrato da Google Play prima della conferma.
 
-## Conservazione, protezione e cancellazione
+Per gestire la demo e lo sblocco offline, l'app conserva separatamente dall'inventario la data di inizio demo, l'ultima data osservata dall'app, lo stato dello sblocco e un indicatore di anomalie dell'orologio. Non si tratta di una data certificata da un server. Un'anomalia può impedire l'accesso alla demo, lasciando disponibile l'esportazione.
 
-L'archivio è conservato nell'area privata dell'app, protetta dai controlli di
-accesso di Android. Non esiste una password aggiuntiva né una cifratura del
-database gestita dall'app. Le regole Android escludono i dati dell'app dal backup
-cloud e dal trasferimento automatico Android tra dispositivi.
+Google Play gestisce pagamento e ripristino. L'app riceve dati tecnici dell'acquisto, fra cui prodotto, stato, identificativi della transazione, token e firma; verifica la risposta per abilitare lo sblocco. Il proprio archivio di licenza conserva lo stato e le date sopra descritti, non una copia completa della ricevuta né i dati della carta. Non è previsto l'invio delle ricevute a un server dello sviluppatore.
 
-«Nuovo inventario» azzera i conteggi conservando il catalogo.
-«Cancella archivio completo» elimina prodotti, conteggi e valori appresi;
-non elimina nome azienda, magazzini, preferenze o report già generati.
-I report locali rimangono fino alla cancellazione dei dati dell'app o alla
-disinstallazione. Queste operazioni eliminano anche l'archivio locale.
-Le copie già condivise vanno eliminate presso i rispettivi destinatari.
-Anche dopo la scadenza della demo è possibile eliminare tutti i dati locali
-dalle impostazioni Android dell'app o disinstallando InventaFast. Prima di
-procedere, esportare gli inventari che si desidera conservare. Lo sviluppatore
-non dispone di una copia remota dell'archivio e non può recuperarlo.
-Non è presente una funzione di importazione/ripristino degli Excel o PDF:
-sono copie consultabili dei conteggi, non backup ripristinabili dell'app.
+La consultazione delle offerte, l'acquisto e il ripristino utilizzano Google Play e possono richiedere una connessione anche se l'inventario funziona offline. L'app non richiede le credenziali dell'account Google.
 
-Le richieste inviate volontariamente via email sono trattate dal destinatario
-per rispondere all'assistenza; la politica di conservazione di tale corrispondenza
-deve essere definita dal responsabile prima della pubblicazione di questa bozza.
+Le informazioni gestite da Google seguono le [Norme sulla privacy di Google](https://policies.google.com/privacy?hl=it). Cancellare i dati di InventaFast non elimina la cronologia di Google Play e non equivale a chiedere un rimborso. Dopo la cancellazione può essere necessario ripristinare l'acquisto con il medesimo account Google Play.
 
-## Modifiche
+## 5. Fotocamera e componenti dello scanner
 
-L'informativa va aggiornata quando cambiano le funzioni o i servizi utilizzati.
+L'accesso alla fotocamera è facoltativo ed è richiesto per la scansione. È possibile inserire manualmente i codici senza concedere il permesso, oppure revocarlo nelle impostazioni Android. Torcia, suono e vibrazione servono al funzionamento dello scanner; suono e vibrazione sono disattivabili separatamente.
 
----
+Il riconoscimento usa Google ML Kit con modello incluso nell'app. Secondo la [documentazione privacy di ML Kit](https://developers.google.com/ml-kit/terms), immagini e risultati del riconoscimento sono elaborati sul dispositivo e non sono inviati ai server Google attraverso tali API.
 
-Nota di pubblicazione: sostituire le note di revisione con le decisioni verificate,
-pubblicare su URL pubblico HTTPS accessibile senza login e non in formato PDF,
-e rendere il testo o il collegamento accessibile da Preferenze → Informazioni.
+**Diagnostica: verifica ancora aperta.** Google documenta separatamente informazioni su dispositivo e app, identificativi d'installazione, prestazioni, configurazione delle API ed errori, utilizzati per diagnostica e analisi d'uso. Questi dati non vanno confusi con le fotografie o con l'inventario. Fonte: [dichiarazioni sui dati di ML Kit](https://developers.google.com/ml-kit/android-data-disclosure).
 
+La configurazione release esaminata esclude il permesso Android INTERNET, ma questo elemento da solo non dimostra l'assenza di comunicazioni tramite altri servizi presenti sul dispositivo. Non è stata completata una verifica del traffico e delle comunicazioni fra processi sulla release definitiva. Finché tale controllo resta aperto, questa bozza non afferma né “nessun dato raccolto” né che ogni categoria documentata da Google venga effettivamente trasmessa da InventaFast.
+
+Prima della pubblicazione occorre definire il trattamento effettivo, i destinatari, la conservazione e la base giuridica della diagnostica, oltre agli eventuali obblighi di informazione e consenso. Il permesso fotocamera non costituisce un consenso generale alla telemetria.
+
+## 6. Esportazione e condivisione
+
+Excel e PDF sono generati e salvati nell'area dell'app usando i dati dell'inventario. L'utente può avviare la condivisione e scegliere un'altra app o un destinatario tramite Android.
+
+Il destinatario potrà accedere ai dati contenuti nel report secondo il servizio scelto. Lo sviluppatore non riceve automaticamente le esportazioni. Controllare il contenuto prima di condividerlo, soprattutto se include informazioni personali o riservate.
+
+## 7. Assistenza, finalità e basi giuridiche
+
+Quando scrivi all'assistenza, Louis Sanges riceve indirizzo email, eventuale nome, contenuto del messaggio e allegati che decidi di inviare. Non inviare password, dati completi della carta, documenti d'identità o interi archivi se non necessari.
+
+Per i trattamenti di sua competenza, il titolare utilizza:
+
+| Finalità | Dati necessari | Base giuridica |
+| --- | --- | --- |
+| Fornire la demo, gestire lo sblocco e rispondere a richieste relative all'app o all'acquisto | Stato della licenza, dati tecnici necessari dell'acquisto; contatto e contenuto pertinente delle richieste | Esecuzione del contratto o misure precontrattuali richieste dall'interessato, art. 6(1)(b) GDPR |
+| Rispondere alle richieste di esercizio dei diritti e adempiere a obblighi applicabili | Dati indispensabili alla richiesta o all'obbligo | Obbligo legale, art. 6(1)(c) GDPR |
+| Accertare, esercitare o difendere un diritto in una controversia concreta | Soltanto la documentazione pertinente | Legittimo interesse alla tutela dei diritti, art. 6(1)(f) GDPR, previa valutazione della necessità e del bilanciamento |
+
+L'invio di email è facoltativo, ma senza un contatto e le informazioni indispensabili potrebbe non essere possibile rispondere. I dati necessari alla verifica dell'acquisto servono per abilitare o ripristinare lo sblocco. Le basi indicate non autorizzano automaticamente eventuale diagnostica degli SDK.
+
+## 8. Destinatari e trasferimenti
+
+La casella di assistenza usa **Microsoft Outlook/Hotmail**: Microsoft tratta le comunicazioni secondo le condizioni del servizio e la propria [informativa privacy](https://www.microsoft.com/it-it/privacy/privacystatement).
+
+**Google** gestisce i servizi Google Play e i trattamenti descritti nelle proprie informative. Le app e i destinatari scelti per condividere un report trattano invece la copia ricevuta secondo le loro condizioni. Autorità o professionisti possono ricevere soltanto dati necessari a un obbligo applicabile o alla gestione di una controversia.
+
+L'inventario locale non viene trasferito automaticamente all'estero dallo sviluppatore. L'uso di email, Google Play e servizi esterni può comportare trattamenti anche fuori dallo Spazio economico europeo. Microsoft e Google descrivono nelle rispettive informative le garanzie applicabili, incluse clausole contrattuali standard e, dove applicabile, decisioni di adeguatezza. Si vedano anche le [garanzie per i trasferimenti di Google](https://policies.google.com/privacy/frameworks?hl=it). Non si dichiara che tutti i dati restino nell'Unione europea.
+
+La consultazione di questo documento su **GitHub** comporta un accesso a un servizio distinto dall'app, soggetto all'[informativa GitHub](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement). Non comporta il caricamento del tuo inventario.
+
+## 9. Conservazione, protezione e cancellazione
+
+**Inventario e preferenze.** Restano sul dispositivo finché vengono cancellati dall'utente. L'area privata dell'app è protetta dai controlli Android; non sono presenti una password aggiuntiva o una cifratura del database gestita dall'app. Lo stato di licenza è conservato separatamente mediante l'archiviazione protetta del sistema.
+
+La configurazione esclude i dati dell'app dal backup cloud e dal trasferimento automatico Android. Non elimina eventuali copie prodotte da versioni precedenti o da strumenti esterni.
+
+**Comandi di cancellazione.**
+
+- “Nuovo inventario” azzera i conteggi dei magazzini selezionati e conserva il catalogo.
+- “Cancella archivio completo” elimina prodotti, conteggi collegati e valori appresi; conserva nome azienda, magazzini, preferenze, report già generati e stato della licenza.
+- Cancellare tutti i dati dell'app dalle impostazioni Android o disinstallarla elimina l'archivio locale, i report nell'area dell'app e lo stato di licenza. La scadenza della demo non impedisce queste operazioni.
+- Le copie salvate o condivise fuori dall'app vanno eliminate separatamente. I report interni non hanno una scadenza automatica.
+
+Lo sviluppatore non dispone di una copia remota da recuperare. Excel e PDF sono report consultabili: non esiste una funzione che li importi per ripristinare l'archivio.
+
+**Email di assistenza.** Messaggi e allegati vengono conservati per gestire la richiesta e per **6 mesi dalla sua chiusura**, poi cancellati dalle copie gestite dal titolare. Puoi chiederne la cancellazione anche prima: quando ricorrono le condizioni dell'art. 17 GDPR, il titolare provvede senza ingiustificato ritardo. Il termine massimo ordinario di conservazione non viene quindi prolungato in attesa di una richiesta. Se un documento è necessario per un obbligo legale o una controversia concreta, ne viene conservata separatamente solo la parte pertinente per il periodo richiesto dall'obbligo o dalla tutela del diritto. Le copie tecniche del fornitore email seguono le sue regole di cancellazione e conservazione.
+
+I dati conservati autonomamente da Google, Microsoft o dal destinatario di una condivisione non vengono eliminati cancellando l'app.
+
+## 10. Diritti e richieste
+
+Nei casi previsti dal GDPR puoi chiedere accesso, rettifica, cancellazione, limitazione e portabilità dei dati, nonché opporti ai trattamenti basati sul legittimo interesse. Se un trattamento è basato sul consenso, puoi revocarlo senza pregiudicare la liceità del trattamento precedente.
+
+Scrivi a **louisbigdev@hotmail.com**. La risposta viene fornita di regola gratuitamente entro un mese; eventuali proroghe, fino a ulteriori due mesi nei casi previsti, vengono motivate entro il primo mese. Possono essere richieste solo informazioni necessarie a verificare l'identità.
+
+Puoi presentare reclamo al **[Garante per la protezione dei dati personali](https://www.garanteprivacy.it/)** o all'autorità competente. I diritti non sono assoluti e si applicano alle condizioni stabilite dal GDPR.
+
+Il titolare non può accedere da remoto al tuo archivio: per i dati esclusivamente locali puoi usare i comandi dell'app e di Android descritti sopra. Questo non limita i diritti sui dati effettivamente ricevuti dal titolare, ad esempio via email.
+
+## 11. Aggiornamenti
+
+La data di revisione è indicata all'inizio. L'informativa sarà aggiornata quando cambiano funzioni, fornitori o trattamenti. Per nuove finalità verranno fornite le informazioni necessarie prima del relativo trattamento e, se richiesto, verrà raccolto un consenso distinto. La semplice lettura dell'informativa non costituisce consenso.
