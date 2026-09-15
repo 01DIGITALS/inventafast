@@ -44,6 +44,22 @@ L'utente ha riportato un ulteriore riscontro della task tecnica: ML Kit viene in
 
 La sola scelta di non aprire la fotocamera non può essere presentata come blocco dell'inizializzazione di ML Kit. Resta da verificare quali controlli ufficiali siano disponibili e se l'eventuale gestione del consenso debba precedere l'avvio dei componenti pertinenti. Non risulta confermata, da questo aggiornamento, alcuna opzione per disabilitare la diagnostica.
 
+## Rapporto dedicato per Work e valutazione residua
+
+Letto direttamente `mobile/store/RAPPORTO_PER_WORK_PRIVACY.md`, riferito al medesimo bundle 0.2.0+2 sopra identificato. Il rapporto conferma assenza di consenso specifico, interruttore e blocco preventivo dell'inizializzazione. Nelle API ufficiali consultate non è stato individuato un opt-out generale documentato per questo stack. Non è una prova di inesistenza di qualsiasi controllo in ogni versione.
+
+Gli eventi di elaborazione comprendono anche errori e letture non riuscite. Chiudere la camera non dimostra cessazione di ogni attività o eliminazione di eventi accodati. Il limite di tentativi di 30 minuti riscontrato internamente non è un tempo di conservazione e non viene inserito nella policy come tale.
+
+Ricevute, firme, token e identificativi ordine sono trattati per la verifica locale; non risultano persistiti nel database, nello storage licenza o nei log applicativi esaminati. Il rapporto non esclude cache/log interni Google. I test di acquisto restano simulati.
+
+### Valutazione di Work sul consenso
+
+Le [linee guida del Garante](https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9677876), sezioni 4–5, distinguono gli accessi strettamente necessari dagli altri: per questi ultimi il consenso richiesto dalla disciplina ePrivacy non può essere sostituito dal legittimo interesse GDPR. Non si applicano meccanicamente all'app le prescrizioni grafiche dei banner web.
+
+Per questa integrazione, la necessità stretta delle metriche per fornire lo scanner richiesto dall'utente non è stata dimostrata. È una valutazione di Work sulle evidenze disponibili, non una pronuncia del Garante su ML Kit. Non è pertanto giustificato chiudere la conformità con la sola informativa o dichiarare un'esenzione già accertata. Il requisito prudenziale da sottoporre alla task tecnica è impedire i flussi diagnostici non necessari prima di una scelta valida e dopo rifiuto/revoca, verificando l'intero stack; se non realizzabile con strumenti supportati, valutare un decoder alternativo. Un semplice checkbox non risolve il problema. Restano da precisare ruoli e conservazione prima di redigere un consenso informato.
+
+Le domande del rapporto su email e durata sono superate dalle conferme già ricevute: louisbigdev@hotmail.com e massimo 6 mesi dalla chiusura con cancellazione anticipata quando dovuta. Sono state chieste soltanto le informazioni ancora mancanti: persone/archivi coinvolti nell'assistenza e consultazione/esportazione/condivisione dei report degli incassi. Risposte pendenti; nessuna prassi amministrativa viene inventata.
+
 ## Prima della versione definitiva
 
 1. Completare l'inquadramento giuridico della diagnostica confermata: ruoli, base giuridica, conservazione pertinente ed eventuale informazione/consenso in app. Le pagine ML Kit consultate descrivono metriche e finalità ma non forniscono, da sole, una base giuridica specifica per questa integrazione o un periodo unico di conservazione. Non inventare un consenso già raccolto o attribuire automaticamente il legittimo interesse. Confermare che il candidato firmato mantenga la configurazione verificata. Non usare il permesso fotocamera come consenso alla diagnostica.
