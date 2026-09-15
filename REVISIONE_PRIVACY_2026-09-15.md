@@ -1,5 +1,26 @@
 # Revisione della bozza privacy — 15 settembre 2026
 
+## Stato corrente — Android 0.3.0+3
+
+Letto il rapporto locale `mobile/store/VERIFICA_PRIVACY_0.3.0.md` del 15 settembre 2026. **Le sezioni successive relative a ML Kit e al bundle 0.2.0 sono storiche e superate per lo scanner di questo candidato.** Non rappresentano una richiesta ancora attuale di consenso per lo scanner ZXing.
+
+- Artefatto: AAB 0.3.0+3, SHA-256 `b3185f78995182310d640bbb0fa8b479050411809061883e87b02685aecd8bf8`, 68.843.522 byte; audit non firmato per pubblicazione.
+- Scanner: flutter_zxing 3.0.1, ZXing-C++ 3.1.1 e camera 0.12.1. Elaborazione locale dei fotogrammi, senza URL/galleria/salvataggio immagini; log nativo disattivato. Avvio entrando nello scanner e rilascio uscendo.
+- Rapporto: manifest senza ML Kit/provider/INTERNET, DEX senza `com.google.mlkit` e `mlkit:vision`, dipendenze release senza ML Kit/mobile_scanner; librerie ZXing incluse.
+- Restano marker GMS di telemetria e DataTransport riconducibili alle dipendenze di Billing 8.0.0. Non provano che ML Kit sia ancora presente o che avvenga un invio, ma impediscono di dichiarare assenza generale di componenti diagnostici Google.
+- Collaudi riportati: 56 test Flutter, 2 test nativi (EAN-13 noto, persistenza ed export offline), analisi senza problemi, Lint 0 errori/3 avvisi, allineamento nativo e zipalign a 16 KB, avvio e lifecycle camera su emulatore. Work ha letto il rapporto e non presenta questi collaudi come rieseguiti direttamente.
+- Restano prove ottiche su etichette reali, riflessi, bassa luce e torcia fisica, oltre alla pubblicazione firmata/configurazione Play e alla verifica iOS. Non viene dichiarata superiorità prestazionale rispetto a ML Kit.
+
+### Lavoro residuo attuale
+
+1. Valutare separatamente i flussi necessari degli acquisti e l'eventuale diagnostica Billing: categorie di dati, finalità, ruoli, conservazione, condizioni applicabili ed eventuali controlli. La valutazione precedente sulle metriche ML Kit non viene trasferita automaticamente a Billing.
+2. Definire con il titolare la gestione dei report degli incassi, tuttora non decisa. Assistenza Hotmail, accesso esclusivo del titolare, email corretta e durata massima sono già confermati.
+3. Allineare il modulo Sicurezza dei dati e la pagina definitiva al candidato effettivamente distribuito. I collaudi sul campo riguardano l'affidabilità del nuovo scanner e non provano da soli l'assenza di flussi degli altri SDK.
+
+La policy GitHub è aggiornata al nuovo scanner e resta in bozza per i punti sopra. Non sono state modificate app, impostazioni Play o informazioni del portfolio.
+
+## Storico delle revisioni precedenti
+
 ## Esito e perimetro
 
 Aggiornata PRIVACY_BOZZA_IT.md su richiesta del titolare. È una bozza revisionata, non una certificazione di conformità né una pagina definitiva per Google Play.
