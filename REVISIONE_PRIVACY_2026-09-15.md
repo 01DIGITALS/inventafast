@@ -6,7 +6,7 @@ Aggiornata PRIVACY_BOZZA_IT.md su richiesta del titolare. È una bozza revisiona
 
 Confermati dall'utente: Louis Sanges come titolare, LouisBigDev come sviluppatore, louisbigdev@hotmail.com come contatto e 6 mesi dalla chiusura per le email di assistenza. Aggiunta la cancellazione anticipata su richiesta quando applicabile, senza ingiustificato ritardo; non una promessa incondizionata di cancellazione istantanea. Il limite ordinario evita di conservare email indefinitamente in assenza di richieste.
 
-La revisione del codice è stata svolta direttamente in sola lettura sul progetto Android locale. La richiesta di un secondo controllo alla task “Definisci InventaFast” non è stata consegnata: l'app segnala che la task ha già un processo di scrittura attivo. Nessun suo rapporto viene presentato come ricevuto.
+La revisione del codice è stata svolta direttamente in sola lettura sul progetto Android locale. La richiesta di un secondo controllo alla task “Definisci InventaFast” non è stata consegnata: l'app segnala che la task ha già un processo di scrittura attivo. Successivamente l'utente ha riportato la raccomandazione della task e Work ha letto direttamente il rapporto locale aggiornato `mobile/store/VERIFICA_PRIVACY_0.2.0.md`. L'allineamento seguente si basa su quel rapporto e sulle fonti Google; non si dichiara riuscita la consegna diretta.
 
 ## Riscontri tecnici
 
@@ -26,9 +26,21 @@ Percorsi relativi alla cartella mobile del progetto di sviluppo, non a questo re
 
 L'audit preesistente AUDIT_GOOGLE_PLAY_2026-09-15.md è stato usato soltanto come contesto: contiene riferimenti a una versione precedente senza acquisti e non è stato assunto come fotografia completa della versione attuale. Nessuna nuova build, prova su dispositivo, modifica del codice o caricamento nello store effettuati in questa revisione.
 
+## Allineamento con la verifica tecnica aggiornata
+
+Si mantiene ML Kit bundled per la prima versione. La scelta privilegia l'integrazione già collaudata; non dimostra superiorità rispetto a ZXing-C++, che richiederebbe integrazione e prove comparative. Non è una conclusione sulla liceità della diagnostica.
+
+Il rapporto aggiornato riguarda InventaFast Android 0.2.0+2, AAB di 67.939.807 byte, SHA-256 `2ae4fba15ca7ea7739c91ed127aa02aacb5e22aabe7f265c0bad8307cf62c039`. Sostituisce il precedente hash `4dd4fef1b3f70f56c72403a5944fff841db1a06a438ba361c46ecc6ce4859861`.
+
+Il rapporto conferma nei DEX del nuovo bundle il percorso ML Kit verso Google Play Services (`mlkit:vision`, servizio telemetry e `IClientTelemetryService`), con 38 riferimenti pertinenti nella mappa R8. È chiusa l'incertezza sulla presenza del percorso diagnostico. Non si richiede un test senza traffico per dimostrarne l'assenza: un simile test non sarebbe conclusivo.
+
+Risultati riportati dalla task tecnica: 56 test Flutter superati, analisi Dart senza issue, Android Lint 0 errori e 3 avvisi, verifiche native di allineamento a 16 KB superate, avvio e fotocamera sull'emulatore x86_64 a 16 KB riusciti. Work ha letto il rapporto, non ha rieseguito questi collaudi. Restano distinti il candidato firmato per Play, i pagamenti/ripristini reali e il collaudo ARM64 a 16 KB.
+
+La sezione scanner della policy ora dichiara le metriche Google e distingue riconoscimento locale e diagnostica. Non contiene una promessa di assenza di raccolta. Email e conservazione sono già confermate dal titolare: le indicazioni contrarie rimaste in fondo al rapporto locale sono superate dalle conferme riportate all'inizio di questo documento.
+
 ## Prima della versione definitiva
 
-1. Completare la verifica della diagnostica sulla release firmata: flussi prima/dopo l'uso dello scanner, servizi Google Play e comunicazioni fra processi; definire dati effettivamente trattati, destinatari, finalità, conservazione, ruoli e base giuridica. Se necessario, modificare l'integrazione e l'informazione/consenso in app. Non usare il permesso fotocamera come consenso alla diagnostica.
+1. Completare l'inquadramento giuridico della diagnostica confermata: ruoli, base giuridica, conservazione pertinente ed eventuale informazione/consenso in app. Le pagine ML Kit consultate descrivono metriche e finalità ma non forniscono, da sole, una base giuridica specifica per questa integrazione o un periodo unico di conservazione. Non inventare un consenso già raccolto o attribuire automaticamente il legittimo interesse. Confermare che il candidato firmato mantenga la configurazione verificata. Non usare il permesso fotocamera come consenso alla diagnostica.
 2. Mappare ordini, rimborsi, report finanziari e diagnostica eventualmente accessibili al titolare in Play Console, comprese copie esportate, destinatari amministrativi e obblighi di conservazione applicabili. La sola ispezione del codice non verifica questi trattamenti.
 3. Attuare operativamente la cancellazione delle email dopo 6 mesi e su richiesta quando dovuta, incluse le copie gestite dal titolare. Verificare condizioni del servizio email, ruoli e garanzie applicabili al suo effettivo utilizzo; non presumere un accordo da responsabile del trattamento solo perché la casella è Hotmail.
 4. Valutare e documentare il bilanciamento prima di usare il legittimo interesse per la difesa di diritti; non estenderlo indiscriminatamente a telemetria o marketing.
