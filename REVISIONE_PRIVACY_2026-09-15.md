@@ -38,6 +38,12 @@ Risultati riportati dalla task tecnica: 56 test Flutter superati, analisi Dart s
 
 La sezione scanner della policy ora dichiara le metriche Google e distingue riconoscimento locale e diagnostica. Non contiene una promessa di assenza di raccolta. Email e conservazione sono già confermate dal titolare: le indicazioni contrarie rimaste in fondo al rapporto locale sono superate dalle conferme riportate all'inizio di questo documento.
 
+## Precisazioni tecniche trasmesse dal titolare
+
+L'utente ha riportato un ulteriore riscontro della task tecnica: ML Kit viene inizializzato all'avvio tramite un componente Android, mentre la diagnostica di riconoscimento è legata all'elaborazione dello scanner. Anche la consultazione del prodotto Google Play parte all'avvio, prima della pressione di “Acquista”. La policy è stata allineata a questi eventi. Il riscontro non è una misurazione dell'effettivo invio: non è stata effettuata una cattura di rete.
+
+La sola scelta di non aprire la fotocamera non può essere presentata come blocco dell'inizializzazione di ML Kit. Resta da verificare quali controlli ufficiali siano disponibili e se l'eventuale gestione del consenso debba precedere l'avvio dei componenti pertinenti. Non risulta confermata, da questo aggiornamento, alcuna opzione per disabilitare la diagnostica.
+
 ## Prima della versione definitiva
 
 1. Completare l'inquadramento giuridico della diagnostica confermata: ruoli, base giuridica, conservazione pertinente ed eventuale informazione/consenso in app. Le pagine ML Kit consultate descrivono metriche e finalità ma non forniscono, da sole, una base giuridica specifica per questa integrazione o un periodo unico di conservazione. Non inventare un consenso già raccolto o attribuire automaticamente il legittimo interesse. Confermare che il candidato firmato mantenga la configurazione verificata. Non usare il permesso fotocamera come consenso alla diagnostica.
