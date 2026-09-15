@@ -11,6 +11,12 @@ Letto il rapporto locale `mobile/store/VERIFICA_PRIVACY_0.3.0.md` del 15 settemb
 - Collaudi riportati: 56 test Flutter, 2 test nativi (EAN-13 noto, persistenza ed export offline), analisi senza problemi, Lint 0 errori/3 avvisi, allineamento nativo e zipalign a 16 KB, avvio e lifecycle camera su emulatore. Work ha letto il rapporto e non presenta questi collaudi come rieseguiti direttamente.
 - Restano prove ottiche su etichette reali, riflessi, bassa luce e torcia fisica, oltre alla pubblicazione firmata/configurazione Play e alla verifica iOS. Non viene dichiarata superiorità prestazionale rispetto a ML Kit.
 
+### Conferma del collaudo sul dispositivo fisico
+
+Il titolare ha comunicato il completamento del collaudo sul Nothing: lettura dei codici, beep ripetuto e torcia funzionanti, con dati preservati. **ZXing è confermato come sostituto di ML Kit.** Questo esito è riportato dall'utente; Work non ha rieseguito il test. Non viene esteso automaticamente a ogni formato, condizione di luce o dispositivo, né alla valutazione dei componenti Google Play Billing.
+
+La precedente indicazione di collaudo sul Nothing ancora da eseguire è superata per le funzionalità sopra confermate. Non è stato comunicato un nuovo hash del bundle: resta il riferimento all'artefatto 0.3.0+3 descritto nel rapporto.
+
 ### Lavoro residuo attuale
 
 1. Valutare separatamente i flussi necessari degli acquisti e l'eventuale diagnostica Billing: categorie di dati, finalità, ruoli, conservazione, condizioni applicabili ed eventuali controlli. La valutazione precedente sulle metriche ML Kit non viene trasferita automaticamente a Billing.
