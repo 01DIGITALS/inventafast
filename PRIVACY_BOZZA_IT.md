@@ -2,7 +2,7 @@
 
 **Bozza revisionata il 15 settembre 2026 — non ancora definitiva per lo store.**
 Il contatto e la durata di conservazione delle email sono stati confermati dal titolare.
-La verifica tecnica aggiornata conferma la presenza della diagnostica Google. ML Kit viene mantenuto per questa versione. Restano da completare l'inquadramento giuridico della diagnostica e dei trattamenti amministrativi degli acquisti, riportati nelle [note di revisione](REVISIONE_PRIVACY_2026-09-15.md).
+Questa bozza riguarda il candidato Android **0.3.0+3**, nel quale ML Kit è stato sostituito con un decoder locale. Restano da completare la valutazione dei componenti Google Play Billing e la definizione dei trattamenti amministrativi degli incassi, riportate nelle [note di revisione](REVISIONE_PRIVACY_2026-09-15.md).
 
 ## 1. Titolare e contatti
 
@@ -19,7 +19,7 @@ Questa informativa riguarda InventaFast per Android. Non descrive una futura ver
 - Gli acquisti sono gestiti da Google Play. Lo sviluppatore non riceve dall'app i dati della carta di pagamento.
 - Excel e PDF sono generati localmente. La condivisione avviene soltanto quando l'utente la richiede e sceglie un destinatario.
 - Le email inviate all'assistenza sono ricevute e trattate dal titolare.
-- L'elaborazione locale dello scanner non equivale all'assenza di diagnostica dei componenti Google: si veda la sezione 5.
+- Lo scanner usa un decoder locale. I servizi degli acquisti includono componenti Google da valutare separatamente: si veda la sezione 4.
 
 ## 3. Dati dell'inventario e funzionamento locale
 
@@ -43,21 +43,17 @@ All'avvio l'app avvia la consultazione del prodotto tramite Google Play, prima c
 
 Le informazioni gestite da Google seguono le [Norme sulla privacy di Google](https://policies.google.com/privacy?hl=it). Cancellare i dati di InventaFast non elimina la cronologia di Google Play e non equivale a chiedere un rimborso. Dopo la cancellazione può essere necessario ripristinare l'acquisto con il medesimo account Google Play.
 
-## 5. Fotocamera e componenti dello scanner
+**Componenti Google degli acquisti — valutazione ancora aperta.** Google Play Billing include componenti di diagnostica e trasporto degli eventi, distinti dallo scanner locale. La loro presenza è stata rilevata nelle dipendenze del candidato esaminato; non dimostra, da sola, quali dati siano effettivamente trasmessi in una specifica sessione. Non è stata effettuata una cattura di rete. L'assenza del permesso INTERNET dell'app non controlla le comunicazioni svolte da Google Play Services.
+
+Prima dell'uso di questa bozza come informativa definitiva occorre completare la valutazione dei flussi di acquisto e della loro eventuale diagnostica: dati, finalità, ruoli, conservazione, base giuridica ed eventuali controlli o consensi necessari. Non si dichiara che l'intera app sia priva di componenti diagnostici Google.
+
+## 5. Fotocamera e scanner locale
 
 L'accesso alla fotocamera è facoltativo ed è richiesto per la scansione. È possibile inserire manualmente i codici senza concedere il permesso, oppure revocarlo nelle impostazioni Android. Torcia, suono e vibrazione servono al funzionamento dello scanner; suono e vibrazione sono disattivabili separatamente.
 
-Il riconoscimento usa Google ML Kit con modello incluso nell'app. Secondo la [documentazione privacy di ML Kit](https://developers.google.com/ml-kit/terms), immagini e risultati del riconoscimento sono elaborati sul dispositivo e non sono inviati ai server Google attraverso tali API.
+Nella versione Android 0.3.0+3 il riconoscimento usa **ZXing-C++ tramite flutter_zxing**, un decoder locale che sostituisce Google ML Kit. La fotocamera e il processo di decodifica vengono avviati entrando nello scanner e rilasciati uscendo. I fotogrammi sono elaborati sul dispositivo; questa integrazione non usa servizi remoti, lettura di immagini da URL o selezione dalla galleria, e non salva fotografie o video. La registrazione dei log del decoder nativo è disattivata.
 
-ML Kit viene inizializzato all'avvio dell'app tramite un componente Android; la diagnostica del riconoscimento è collegata all'elaborazione dello scanner. Questi eventi non dimostrano, da soli, che dati siano stati inviati in una specifica sessione: non è stata effettuata una cattura del traffico di rete. Non si assume che l'inizializzazione attenda l'apertura della fotocamera o la concessione del relativo permesso.
-
-**Diagnostica Google.** Oltre al riconoscimento locale, ML Kit include componenti che raccolgono metriche tecniche e possono comunicarle a Google tramite Google Play Services. La verifica del bundle Android conferma la presenza di questo percorso. La scansione offline non equivale quindi all'assenza di diagnostica.
-
-Per le funzioni con modello incluso, Google documenta informazioni su dispositivo e app, identificativi per installazione, tempi di elaborazione, configurazione e versione delle API, dimensioni degli input/output, eventi tecnici e codici di errore. Queste metriche sono distinte dalle immagini e dal contenuto dell'inventario. Google le utilizza per analisi d'uso, diagnosi dei problemi, manutenzione e miglioramento delle API e individuazione degli abusi. Fonte: [dichiarazioni sui dati di ML Kit](https://developers.google.com/ml-kit/android-data-disclosure) e [condizioni privacy ML Kit](https://developers.google.com/ml-kit/terms).
-
-L'effettiva trasmissione può dipendere dalla configurazione dei servizi Google, dal campionamento e dalla disponibilità della rete. L'assenza del permesso INTERNET nell'app non impedisce necessariamente comunicazioni svolte da Google Play Services. Non si dichiara che ogni categoria venga trasmessa in ogni scansione. L'auto-zoom non è abilitato. L'app attuale non offre un interruttore né raccoglie un consenso specifico per la diagnostica. Il rifiuto del permesso fotocamera, l'uscita dallo scanner e la disattivazione dell'auto-zoom non garantiscono l'arresto della diagnostica o la cancellazione di eventi già accodati.
-
-**Punto da completare prima dell'uso come informativa definitiva:** individuare i ruoli e la base giuridica applicabili alla diagnostica, i criteri di conservazione pertinenti e gli eventuali obblighi di informazione e consenso nell'app. La scelta tecnica di mantenere ML Kit e la descrizione della diagnostica non sostituiscono questa valutazione. Il permesso fotocamera non costituisce un consenso generale alla telemetria.
+La rimozione di ML Kit e del suo componente di inizializzazione è stata verificata nel bundle esaminato. La diagnostica specifica ML Kit descritta nelle precedenti bozze non riguarda questo nuovo scanner. Questa conclusione non si estende automaticamente ai servizi Google Play utilizzati per gli acquisti, descritti nella sezione 4.
 
 ## 6. Esportazione e condivisione
 
