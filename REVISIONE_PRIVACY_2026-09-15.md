@@ -1,3 +1,29 @@
+# Chiusura redazionale della privacy — 15 settembre 2026
+
+La versione corrente destinata agli utenti è [PRIVACY_IT.md](PRIVACY_IT.md). Le sezioni successive conservano lo storico e non indicano tutte obblighi ancora pendenti. Finalizzata la redazione per Android 0.3.0 con ZXing, sulla base dei rapporti tecnici e delle conferme del titolare. Non è una certificazione giuridica, un'approvazione Google Play o una verifica sperimentale di ogni flusso SDK.
+
+## Chiarimento conclusivo su Google Play Billing
+
+- [Google: dati dei servizi di pagamento](https://support.google.com/googleplay/android-developer/answer/10787469?hl=en), domanda sui servizi di pagamento esterni: il modulo Data safety non richiede di attribuire all'app i dati finanziari raccolti direttamente dal servizio alle proprie condizioni e mai accessibili all'app. L'eccezione non copre automaticamente altri dati ricevuti dall'app, come quelli dell'acquisto, né qualsiasi diagnostica.
+- [Google: librerie Play services di base](https://developers.google.com/android/guides/play-data-disclosure): Google dichiara che base, basement, OSS licenses e tasks non raccolgono dati degli utenti finali. La pagina riguarda le versioni correnti delle librerie elencate; non equivale a una dichiarazione universale su Billing o DataTransport. I marker generici nel bundle non bastano a provare un trattamento attivo.
+- [Google: informativa e conservazione](https://policies.google.com/privacy?hl=en): i tempi dipendono da dati, uso e impostazioni; possono essere più lunghi per sicurezza, prevenzione abusi o registrazioni finanziarie. La policy non inventa un termine unico né lo applica alle email del titolare.
+
+La conclusione redazionale è distinguere il trattamento applicativo verificato dal servizio Google: consultazione prodotto all'avvio, acquisto/ripristino, dati transitori per la verifica e stato licenza locale sono descritti esplicitamente. I trattamenti autonomi Google rinviano alla sua informativa. Non viene dichiarata assenza generale di diagnostica, né un consenso già raccolto, né un'esenzione generale GDPR/ePrivacy.
+
+Le evidenze disponibili non dimostrano la necessità di aggiungere un consenso specifico soltanto per la presenza di librerie generiche Billing. Le precedenti formulazioni che trattavano tale presenza come impedimento automatico alla redazione definitiva erano eccessive. Rimane il limite tecnico già documentato: nessuna cattura esaustiva di rete, nessuna deduzione di tempi/ruoli dalle sole classi. Eventuali nuovi trattamenti accertati richiederanno un aggiornamento, anche tecnico se necessario.
+
+## Stato della consegna
+
+- Confermati titolare, email, assistenza Hotmail esclusiva, massimo 6 mesi dalla chiusura con cancellazione anticipata quando dovuta e sola consultazione incassi in Console.
+- Scanner ZXing confermato e collaudato sul Nothing secondo il riscontro dell'utente.
+- Vecchio file di bozza sostituito con rimando alla versione corrente.
+- Nessuna attivazione di hosting, modifica del modulo Sicurezza dei dati o approvazione della release tramite questa consegna. Il documento va collegato dall'app e dalla scheda store tramite una pagina pubblica adeguata; le risposte Data safety devono essere coerenti con il candidato distribuito.
+- La verifica bancaria degli accrediti è indipendente e non condiziona il testo della privacy.
+
+---
+
+## Storico conservato (precedente alla chiusura redazionale)
+
 # Revisione della bozza privacy — 15 settembre 2026
 
 ## Stato corrente — Android 0.3.0+3
